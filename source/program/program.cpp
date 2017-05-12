@@ -11,6 +11,8 @@ int Towerdefense::onDispose() {
 int Towerdefense::onStart() {
     if (!wnd.open())
         return 1;
+    glExt::init();
+    core::Debug::log("OpenGL version: %d\n", glExt::supportedVersion());
     return 0;
 }
 
