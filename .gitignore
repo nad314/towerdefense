@@ -1,2 +1,6 @@
 bin/
 build/
+GTAGS
+GRTAGS
+GPATH
+
