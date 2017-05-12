@@ -22,7 +22,11 @@ int Towerdefense::onStop() {
 int Towerdefense::main() {
     bool done = 0;
     while (!done) {
-        wnd.peekMessageAsync(done);
+        if (wnd.peekMessageAsync(done))
+            continue;
+        glClear(GL_COLOR_BUFFER_BIT);
+        GL::swapBuffers(wnd);
+        std::this_thread::sleep_for(std::chrono::microseconds(50));
     }
     return 0;
 }

@@ -9,4 +9,15 @@ void MainWindow::onOpening() {
 
 void MainWindow::onOpened() {
     Form::onOpened();
+    GL::createContext(*this);
+    GL::init(*this);
+}
+
+void MainWindow::onClosing() {
+    GL::deleteContext();
+    Form::onClosing();
+}
+
+int MainWindow::onPaint(const core::eventInfo& e) {
+    
 }
