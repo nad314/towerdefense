@@ -6,3 +6,7 @@ void MainWindow::onOpening() {
     setTitle("Towerdefense");
     allowResize(false);
 }
+
+void MainWindow::onOpened() {
+    Form::onOpened();
+}
