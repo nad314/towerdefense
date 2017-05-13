@@ -36,3 +36,6 @@ init:
 
 run:
 	./$(BUILD)/$(OUT)
+
+crun: all
+	./$(BUILD)/$(OUT)
