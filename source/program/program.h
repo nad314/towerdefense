@@ -1,5 +1,6 @@
-class Towerdefense: public core::Module {
+class Towerdefense: public core::SIMD32, public core::Module {
     private:
+        Controller c;
         MainWindow wnd;
     public:
         int onLoad() override;

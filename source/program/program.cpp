@@ -13,6 +13,7 @@ int Towerdefense::onStart() {
         return 1;
     glExt::init();
     core::Debug::log("OpenGL version: %d\n", glExt::supportedVersion());
+    wnd.attach(&c);
     return 0;
 }
 
@@ -26,9 +27,9 @@ int Towerdefense::main() {
     while (!done) {
         if (wnd.peekMessageAsync(done))
             continue;
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
         GL::swapBuffers(wnd);
-        std::this_thread::sleep_for(std::chrono::microseconds(50));
+        std::this_thread::sleep_for(std::chrono::microseconds(500));
     }
     return 0;
 }

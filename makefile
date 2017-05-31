@@ -11,6 +11,7 @@ FLAGS = -O2 $(INCLUDE) $(WARN) $(DEFINE)
 LIBS = -L"lib" -lpthread -lfreetype -lSDL2 -lGL -lGLU -lcore -lcore-game -lcore-forms 
 
 OBJ = \
+	controller/controller.o \
 	program/main.o \
 	program/program.o \
 	mainWindow/mainWindow.o

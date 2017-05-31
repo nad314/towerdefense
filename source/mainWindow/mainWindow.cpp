@@ -2,9 +2,9 @@
 
 void MainWindow::onOpening() {
     Form::onOpening();
-    setSize(512, 512);
+    setSize(800, 600);
     setTitle("Towerdefense");
-    allowResize(false);
+    //allowResize(false);
 }
 
 void MainWindow::onOpened() {
@@ -19,5 +19,5 @@ void MainWindow::onClosing() {
 }
 
 int MainWindow::onPaint(const core::eventInfo& e) {
-    
+    return 0;
 }
